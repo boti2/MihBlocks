@@ -34,6 +34,7 @@
 #   msg/js/<LANG>.js for every language <LANG> defined in msg/js/<LANG>.json.
 
 import sys
+import shutil as shu
 # if sys.version_info[0] != 2:
 #   raise Exception("Blockly build only compatible with Python 2.x.\n"
 #                   "You are using: " + sys.version)
@@ -91,7 +92,7 @@ class Gen_uncompressed(threading.Thread):
     self.closure_env = closure_env
 
   def run(self):
-    target_filename = 'blockly_uncompressed_vertical.js'
+    target_filename = 'compiled/mihblocks.dev.js'
     f = open(target_filename, 'w')
     f.write(HEADER)
     f.write(self.format_js("""
@@ -220,12 +221,11 @@ class Gen_compressed(threading.Thread):
 
   def run(self):
     self.gen_core(True)
-    self.gen_core(False)
     self.gen_blocks("vertical")
     self.gen_blocks("common")
 
   def gen_core(self, vertical):
-    target_filename = 'blockly_compressed_vertical.js'
+    target_filename = 'compiled/mihblocks.js'
     search_paths = self.search_paths_vertical
     # Define the parameters for the POST request.
     params = [
@@ -254,10 +254,10 @@ class Gen_compressed(threading.Thread):
 
   def gen_blocks(self, block_type):
     if block_type == "vertical":
-      target_filename = "blocks_compressed_vertical.js"
+      target_filename = "compiled/mihblocks-blocks.main.js"
       filenames = glob.glob(os.path.join("blocks_vertical", "*.js"))
     elif block_type == "common":
-      target_filename = "blocks_compressed.js"
+      target_filename = "compiled/mihblocks-blocks.core.js"
       filenames = glob.glob(os.path.join("blocks_common", "*.js"))
 
     # glob.glob ordering is platform-dependent and not necessary deterministic
@@ -555,6 +555,9 @@ class Gen_langfiles(threading.Thread):
         print("FAILED to create " + f)
 
 if __name__ == "__main__":
+  if os.path.exists('compiled'):
+    shu.rmtree('compiled')
+  os.mkdir('compiled')
   try:
     closure_dir = CLOSURE_DIR_NPM
     closure_root = CLOSURE_ROOT_NPM
