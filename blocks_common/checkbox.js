@@ -11,7 +11,7 @@ goog.require('Blockly.Colours');
 
 goog.require('Blockly.constants');
 
-Blockly.Blocks['checkbox'] = {
+Blockly.Blocks['shadow:checkbox'] = {
   /**
    * Block for checkbox input
    * @this Blockly.Block
@@ -21,8 +21,8 @@ Blockly.Blocks['checkbox'] = {
       "message0": "%1",
       "args0": [
         {
-          "type": "field_checkbox_original",
-          "name": "CHECKBOX"
+          "type": "field_checkbox",
+          "name": "checkbox"
         }
       ],
       "output": "Boolean",

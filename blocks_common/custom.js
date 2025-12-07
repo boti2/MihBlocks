@@ -12,7 +12,7 @@ goog.require('Blockly.Colours');
 
 goog.require('Blockly.constants');
 
-Blockly.Blocks['customInput'] = {
+Blockly.Blocks['shadow:customInput'] = {
   /**
    * Block for custom inputs.
    * @this Blockly.Block
@@ -23,7 +23,7 @@ Blockly.Blocks['customInput'] = {
       "args0": [
         {
           "type": "field_customInput",
-          "name": "CUSTOM"
+          "name": "custom"
         }
       ],
       "outputShape": Blockly.OUTPUT_SHAPE_SQUARE,

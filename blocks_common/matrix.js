@@ -32,7 +32,7 @@ goog.require('Blockly.Colours');
 
 goog.require('Blockly.constants');
 
-Blockly.Blocks['matrix'] = {
+Blockly.Blocks['shadow:matrix'] = {
   /**
    * Block for matrix value.
    * @this Blockly.Block
@@ -46,7 +46,7 @@ Blockly.Blocks['matrix'] = {
       "args0": [
         {
           "type": "field_matrix",
-          "name": "MATRIX",
+          "name": "natrix",
           "width": this.width,
           "height": this.height
         }
@@ -58,7 +58,7 @@ Blockly.Blocks['matrix'] = {
   },
   mutationToDom: function() {
     const container = document.createElement('mutation');
-    const field = this.getField('MATRIX')
+    const field = this.getField('matrix')
 
     container.setAttribute('width', field.matrixWidth);
     container.setAttribute('height', field.matrixHeight);
@@ -68,7 +68,7 @@ Blockly.Blocks['matrix'] = {
     const width = parseInt(xmlElement.getAttribute('width'), 10);
     const height = parseInt(xmlElement.getAttribute('height'), 10);
 
-    const field = this.getField('MATRIX')
+    const field = this.getField('matrix')
     field.matrixWidth = width;
     field.matrixHeight = height;
   },

@@ -32,7 +32,7 @@ goog.require('Blockly.Colours');
 
 goog.require('Blockly.constants');
 
-Blockly.Blocks['note'] = {
+Blockly.Blocks['shadow:note'] = {
   /**
    * Block for musical note value.
    * @this Blockly.Block
@@ -43,7 +43,7 @@ Blockly.Blocks['note'] = {
       "args0": [
         {
           "type": "field_note",
-          "name": "NOTE",
+          "name": "note",
           "value": 60
         }
       ],

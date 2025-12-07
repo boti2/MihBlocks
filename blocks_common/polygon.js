@@ -26,7 +26,7 @@ const getXYForPoint = (point, points, opt_offset, opt_scale) => {
   return [x + offset[0],y + offset[1]];
 }
 
-Blockly.Blocks['polygon'] = {
+Blockly.Blocks['shadow:polygon'] = {
   /**
    * Block for complex shapes.
    * @this Blockly.Block

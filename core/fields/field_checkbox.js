@@ -24,7 +24,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.FieldCheckboxOriginal');
+goog.provide('Blockly.FieldCheckbox');
 
 goog.require('Blockly.Colours');
 goog.require('Blockly.Field');
@@ -89,7 +89,7 @@ Blockly.FieldCheckboxOriginal.prototype.init = function() {
     return;
   }
   Blockly.FieldCheckboxOriginal.superClass_.init.call(this);
-  if (this.sourceBlock_ && this.sourceBlock_.type !== "checkbox") {
+  if (this.sourceBlock_ && this.sourceBlock_.type !== "shadow:checkbox") {
     this.checkBackground_ = Blockly.utils.createSvgElement('path',
       {
         'd': 'M25.9 2.5H6.1A3.6 3.6 90 002.5 6.1v19.8A3.6 3.6 90 006.1 29.5h19.8a3.6 3.6 90 003.6-3.6V6.1A3.6 3.6 90 0025.9 2.5'
@@ -163,7 +163,7 @@ Blockly.FieldCheckboxOriginal.prototype.updateWidth = function() {
 
 Blockly.FieldCheckboxOriginal.prototype.getClickTarget_ = function() {
   let output = Blockly.FieldCheckboxOriginal.superClass_.getClickTarget_.call(this)
-  return this.sourceBlock_ && this.sourceBlock_.type !== "checkbox" ? this.fieldGroup_ : output
+  return this.sourceBlock_ && this.sourceBlock_.type !== "shadow:checkbox" ? this.fieldGroup_ : output
 }
 
-Blockly.Field.register('field_checkbox_original', Blockly.FieldCheckboxOriginal);
+Blockly.Field.register('field_checkbox', Blockly.FieldCheckboxOriginal);

@@ -39,7 +39,7 @@ function randomColour() {
   return '#' + ('00000' + num.toString(16)).substr(-6);
 }
 
-Blockly.Blocks['colour_picker'] = {
+Blockly.Blocks['shadow:colour_picker'] = {
   /**
    * Block for colour picker.
    * @this Blockly.Block
@@ -50,7 +50,7 @@ Blockly.Blocks['colour_picker'] = {
       "args0": [
         {
           "type": "field_colour_slider",
-          "name": "COLOUR",
+          "name": "colour",
           "colour": randomColour()
         }
       ],

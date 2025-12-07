@@ -32,7 +32,7 @@ goog.require('Blockly.Colours');
 
 goog.require('Blockly.constants');
 
-Blockly.Blocks['math_number'] = {
+Blockly.Blocks['shadow:math:number'] = {
   /**
    * Block for generic numeric value.
    * @this Blockly.Block
@@ -43,7 +43,7 @@ Blockly.Blocks['math_number'] = {
       "args0": [
         {
           "type": "field_number",
-          "name": "NUM",
+          "name": "number",
           "value": "0"
         }
       ],
@@ -56,7 +56,7 @@ Blockly.Blocks['math_number'] = {
   }
 };
 
-Blockly.Blocks['math_integer'] = {
+Blockly.Blocks['shadow:math:integer'] = {
   /**
    * Block for integer value (no decimal, + or -).
    * @this Blockly.Block
@@ -67,7 +67,7 @@ Blockly.Blocks['math_integer'] = {
       "args0": [
         {
           "type": "field_number",
-          "name": "NUM",
+          "name": "number",
           "precision": 1
         }
       ],
@@ -80,7 +80,7 @@ Blockly.Blocks['math_integer'] = {
   }
 };
 
-Blockly.Blocks['math_whole_number'] = {
+Blockly.Blocks['shadow:math:natural'] = {
   /**
    * Block for whole number value, no negatives or decimals.
    * @this Blockly.Block
@@ -91,7 +91,7 @@ Blockly.Blocks['math_whole_number'] = {
       "args0": [
         {
           "type": "field_number",
-          "name": "NUM",
+          "name": "number",
           "min": 0,
           "precision": 1
         }
@@ -105,7 +105,7 @@ Blockly.Blocks['math_whole_number'] = {
   }
 };
 
-Blockly.Blocks['math_positive_number'] = {
+Blockly.Blocks['shadow:math:positive'] = {
   /**
    * Block for positive number value, with decimal.
    * @this Blockly.Block
@@ -116,7 +116,7 @@ Blockly.Blocks['math_positive_number'] = {
       "args0": [
         {
           "type": "field_number",
-          "name": "NUM",
+          "name": "number",
           "min": 0
         }
       ],
@@ -129,7 +129,7 @@ Blockly.Blocks['math_positive_number'] = {
   }
 };
 
-Blockly.Blocks['math_angle'] = {
+Blockly.Blocks['shadow:angle'] = {
   /**
    * Block for angle picker.
    * @this Blockly.Block
@@ -140,7 +140,7 @@ Blockly.Blocks['math_angle'] = {
       "args0": [
         {
           "type": "field_angle",
-          "name": "NUM",
+          "name": "angle",
           "value": 90
         }
       ],

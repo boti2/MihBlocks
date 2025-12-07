@@ -32,7 +32,7 @@ goog.require('Blockly.Colours');
 
 goog.require('Blockly.constants');
 
-Blockly.Blocks['text'] = {
+Blockly.Blocks['shadow:text'] = {
   /**
    * Block for text value.
    * @this Blockly.Block
@@ -43,7 +43,7 @@ Blockly.Blocks['text'] = {
       "args0": [
         {
           "type": "field_input",
-          "name": "TEXT"
+          "name": "text"
         }
       ],
       "output": "String",
