@@ -39,7 +39,7 @@ goog.require('Blockly.FieldColour');
 goog.require('Blockly.FieldColourSlider');
 // Date picker commented out since it increases footprint by 60%.
 // Add it only if you need it.
-//goog.require('Blockly.FieldDate');
+goog.require('Blockly.FieldDate');
 goog.require('Blockly.FieldDropdown');
 goog.require('Blockly.FieldExpandableAdd');
 goog.require('Blockly.FieldExpandableRemove');
@@ -67,6 +67,7 @@ goog.require('Blockly.constants');
 goog.require('Blockly.inject');
 goog.require('Blockly.utils');
 goog.require('goog.color');
+goog.require('MihBlocks');
 
 
 // Turn off debugging when compiled.
