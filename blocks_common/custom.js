@@ -28,7 +28,7 @@ Blockly.Blocks['shadow:customInput'] = {
       ],
       "outputShape": Blockly.OUTPUT_SHAPE_SQUARE,
       "output": "String",
-      "extensions": ["colours_pen"]
+      "extensions": ["colours:pen"]
     });
   }
 };

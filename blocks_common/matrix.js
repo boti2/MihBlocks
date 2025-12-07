@@ -53,7 +53,7 @@ Blockly.Blocks['shadow:matrix'] = {
       ],
       "outputShape": Blockly.OUTPUT_SHAPE_ROUND,
       "output": "Number",
-      "extensions": ["colours_pen"]
+      "extensions": ["colours:pen"]
     });
   },
   mutationToDom: function() {

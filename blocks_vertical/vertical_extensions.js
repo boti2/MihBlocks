@@ -259,44 +259,44 @@ Blockly.ScratchBlocks.VerticalExtensions.registerAll = function() {
   // Register functions for all category colours.
   for (var i = 0; i < categoryNames.length; i++) {
     var name = categoryNames[i];
-    Blockly.Extensions.register('colours_' + name,
+    Blockly.Extensions.register('colours:' + name,
         Blockly.ScratchBlocks.VerticalExtensions.colourHelper(name));
   }
 
   // Text fields transcend categories.
-  Blockly.Extensions.register('colours_textfield',
+  Blockly.Extensions.register('colours:textfield',
       Blockly.ScratchBlocks.VerticalExtensions.COLOUR_TEXTFIELD);
 
   // Register extensions for common block shapes.
-  Blockly.Extensions.register('shape_procedure',
+  Blockly.Extensions.register('shape:procedure',
       Blockly.ScratchBlocks.VerticalExtensions.SHAPE_PROCEDURE);
-  Blockly.Extensions.register('shape_case',
+  Blockly.Extensions.register('shape:case',
       Blockly.ScratchBlocks.VerticalExtensions.SHAPE_CASE);
-  Blockly.Extensions.register('shape_statement',
+  Blockly.Extensions.register('shape:statement',
       Blockly.ScratchBlocks.VerticalExtensions.SHAPE_STATEMENT);
-  Blockly.Extensions.register('shape_hat',
+  Blockly.Extensions.register('shape:hat',
       Blockly.ScratchBlocks.VerticalExtensions.SHAPE_HAT);
-  Blockly.Extensions.register('shape_end',
+  Blockly.Extensions.register('shape:end',
       Blockly.ScratchBlocks.VerticalExtensions.SHAPE_END);
 
   // Output shapes and types are related.
-  Blockly.Extensions.register('output_number',
+  Blockly.Extensions.register('output:number',
       Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_NUMBER);
-  Blockly.Extensions.register('output_string',
+  Blockly.Extensions.register('output:string',
       Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_STRING);
-  Blockly.Extensions.register('output_boolean',
+  Blockly.Extensions.register('output:boolean',
       Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_BOOLEAN);
-  Blockly.Extensions.register('output_any',
+  Blockly.Extensions.register('output:any',
       Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_ANY);
 
   // Custom procedures have interesting context menus.
-  Blockly.Extensions.registerMixin('procedure_def_contextmenu',
+  Blockly.Extensions.registerMixin('procedure:def_contextmenu',
       Blockly.ScratchBlocks.VerticalExtensions.PROCEDURE_DEF_CONTEXTMENU);
-  Blockly.Extensions.registerMixin('procedure_call_contextmenu',
+  Blockly.Extensions.registerMixin('procedure:call_contextmenu',
       Blockly.ScratchBlocks.VerticalExtensions.PROCEDURE_CALL_CONTEXTMENU);
 
   // Extension blocks have slightly different block rendering.
-  Blockly.Extensions.register('scratch_extension',
+  Blockly.Extensions.register('extension:block',
       Blockly.ScratchBlocks.VerticalExtensions.SCRATCH_EXTENSION);
 };
 
